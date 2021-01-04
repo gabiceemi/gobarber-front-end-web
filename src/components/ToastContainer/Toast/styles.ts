@@ -1,9 +1,9 @@
 import styled, { css } from 'styled-components';
 import { animated } from 'react-spring';
 
-interface ToastProps {
+interface ContainerProps {
   type?: 'success' | 'error' | 'info';
-  hasDescription: boolean;
+  hasDescription: number;
 }
 
 const toastTypeVarioations = {
@@ -21,7 +21,7 @@ const toastTypeVarioations = {
   `,
 };
 
-export const Container = styled(animated.div)<ToastProps>`
+export const Container = styled(animated.div)<ContainerProps>`
   width: 360px;
 
   position: relative;
